@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MillenialApp</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+
+    <string name="title_section1">Assignments</string>
+    <string name="title_section2">Messages</string>
+    <string name="title_section3">Forum</string>
+    <string name="title_section4">Feed</string>
+    <string name="title_section5">Results</string>
+    <string name="title_section6">Rewards</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
