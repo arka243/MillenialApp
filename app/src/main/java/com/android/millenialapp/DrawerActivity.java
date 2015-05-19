@@ -1,5 +1,6 @@
 package com.android.millenialapp;
 
+import android.content.Context;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -7,9 +8,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 
 public class DrawerActivity extends ActionBarActivity {
@@ -17,14 +22,14 @@ public class DrawerActivity extends ActionBarActivity {
     //First We Declare Titles And Icons For Our Navigation Drawer List View
     //This Icons And Titles Are holded in an Array as you can see
 
-    String TITLES[] = {"Home","Events","Mail","Shop","Travel"};
-    int ICONS[] = {R.drawable.ic_launcher,R.drawable.ic_launcher1,R.drawable.ic_launcher2,R.drawable.ic_launcher3,R.drawable.ic_launcher4};
+    String TITLES[] = {"Assignments","Messages","Forum","Feed","Results","Rewards", "Settings"};
+    int ICONS[] = {R.mipmap.ic_menu_assignments_24dp,R.mipmap.ic_menu_messages_24dp,R.mipmap.ic_menu_forum_24dp,R.mipmap.ic_menu_feed_24dp,R.mipmap.ic_menu_results_24dp,R.mipmap.ic_menu_rewards_24dp,R.mipmap.ic_menu_settings_24dp};
 
     //Similarly we Create a String Resource for the name and email in the header view
     //And we also create a int resource for profile picture in the header view
 
-    String NAME = "Akash Bangad";
-    String EMAIL = "akash.bangad@android4devs.com";
+    String NAME = "Priti Changlani";
+    String EMAIL = "changlani.priti@ufl.edu";
     int PROFILE = R.drawable.aka;
 
     private Toolbar toolbar;                              // Declaring the Toolbar Object
@@ -32,26 +37,21 @@ public class DrawerActivity extends ActionBarActivity {
     RecyclerView mRecyclerView;                           // Declaring RecyclerView
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
     RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
-    DrawerLayout Drawer;                                  // Declaring DrawerLayout
+    public DrawerLayout Drawer;                                  // Declaring DrawerLayout
 
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
 
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
+
 
     /* Assinging the toolbar object ot the view
     and setting the the Action bar to our toolbar
      */
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-
-
-
 
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
 
@@ -69,7 +69,9 @@ public class DrawerActivity extends ActionBarActivity {
 
 
         Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
+
         mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.openDrawer,R.string.closeDrawer){
+
 
             @Override
             public void onDrawerOpened(View drawerView) {
@@ -91,7 +93,6 @@ public class DrawerActivity extends ActionBarActivity {
         mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

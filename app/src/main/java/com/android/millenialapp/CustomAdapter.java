@@ -11,14 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by hp1 on 28-12-2014.
- */
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
     private static final int TYPE_HEADER = 0;  // Declaring Variable to Understand which View is being worked on
     // IF the view under inflation and population is header or Item
     private static final int TYPE_ITEM = 1;
+    private static final int TYPE_FOOTER = -1;
 
     private String mNavTitles[]; // String Array to store the passed titles Value from MainActivity.java
     private int mIcons[];       // Int Array to store the passed icons resource value from MainActivity.java
@@ -79,9 +77,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
 
     }
-
-
-
     //Below first we ovverride the method onCreateViewHolder which is called when the ViewHolder is
     //Created, In this method we inflate the item_row.xml layout if the viewType is Type_ITEM or else we inflate header.xml
     // if the viewType is TYPE_HEADER
@@ -108,6 +103,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             return vhHeader; //returning the object created
 
 
+        }else if(viewType == TYPE_FOOTER)
+        {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.footer,parent,false); //Inflating the layout
+
+            ViewHolder vhFooter = new ViewHolder(v,viewType); //Creating ViewHolder and passing the object of type view
+
+            return vhFooter; //returning the object created
         }
         return null;
 
@@ -137,18 +139,24 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         return mNavTitles.length+1; // the number of items in the list will be +1 the titles including the header view.
     }
 
-
     // Witht the following method we check what type of view is being passed
     @Override
     public int getItemViewType(int position) {
         if (isPositionHeader(position))
             return TYPE_HEADER;
 
+        if (isPositionFooter(position))
+            return TYPE_FOOTER;
+
         return TYPE_ITEM;
     }
 
     private boolean isPositionHeader(int position) {
         return position == 0;
+    }
+
+    private boolean isPositionFooter(int position) {
+        return position == -1;
     }
 
 }

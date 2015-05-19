@@ -63,6 +63,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         Log.i(Tag, "From the Millenial App");
 
         // Set up the login form.
