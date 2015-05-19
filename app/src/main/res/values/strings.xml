@@ -1,3 +1,4 @@
+<?xml version = "1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MillenialApp</string>
     <string name="title_activity_drawer">DrawerActivity</string>
@@ -20,4 +21,19 @@
     <string name="hello_world">Hello world!</string>
     <string name="openDrawer">Drawer Open</string>
     <string name="closeDrawer">Drawer Close</string>
+
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="action_sign_up">You don\'t have account? SIGN UP</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="user_title">Administrator</string>
+    <string name="edit_profile_btn">EDIT PROFILE</string>
+    <string name="require_email">Email</string>
+    <string name="require_username">Username</string>
+    <string name="require_password">Password</string>
+    <string name="require_confirmpassword">Confirm Password</string>
+    <string name="require_sign_up">SIGN UP</string>
+
+
 </resources>
