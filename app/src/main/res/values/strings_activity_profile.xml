@@ -1,0 +1,5 @@
+<resources>
+    <!-- Strings related to profile -->
+    <string name="user_title">Administrator</string>
+    <string name="edit_profile_btn">EDIT PROFILE</string>
+</resources>

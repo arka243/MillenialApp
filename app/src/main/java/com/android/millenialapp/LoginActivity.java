@@ -26,6 +26,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,36 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         mUsernameSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                //attemptLogin();
+                String username = mUsernameView.getText().toString();
+                String password = mPasswordView.getText().toString();
+                boolean accountExists = false;
+                int count = 0;
+                for (int i=0; i < DUMMY_CREDENTIALS.length; i++) {
+                    String credential = DUMMY_CREDENTIALS[i];
+                    String[] pieces = credential.split(":");
+                    if (pieces[0].equals(username)) {
+                        // Account exists, check if the password matches.
+                        if(pieces[1].equals(password))
+                        {
+                            accountExists = true;
+                            count = i;
+                        }
+                    }
+                }
+
+                if(accountExists)
+                {
+                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                    Bundle b = new Bundle();
+                    b.putInt("key", count);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Username or Password Not Valid!", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

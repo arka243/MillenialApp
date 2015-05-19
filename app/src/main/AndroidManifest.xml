@@ -26,6 +26,10 @@
             android:name=".DrawerActivity"
             android:label="@string/title_activity_drawer" >
         </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile" >
+        </activity>
     </application>
 
 </manifest>
