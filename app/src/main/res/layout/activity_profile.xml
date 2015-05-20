@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" >
-
+    
             <TextView android:id="@+id/fullname" android:layout_width="match_parent"
             style="?android:textAppearanceLarge" android:layout_marginTop="150dp"
             android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
@@ -19,5 +19,10 @@
              android:layout_width="wrap_content" android:layout_height="wrap_content"
              android:layout_gravity="left" android:text="@string/edit_profile_btn"
              android:layout_marginTop="10dp" android:textStyle="bold"/>
+
+            <Button android:id="@+id/logout" style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="left" android:text="@string/logout_btn"
+            android:layout_marginTop="50dp" android:textStyle="bold"/>
 
 </LinearLayout>

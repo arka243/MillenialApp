@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center_horizontal"
+    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:layout_width="wrap_content" android:inputType="text"
+        android:layout_height="wrap_content" android:singleLine="true"
+        android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
+        android:text="@string/editprofile_first"/>
+
+    <EditText android:id="@+id/editfirstname" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" android:maxLines="1"
+        android:singleLine="true" android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content" android:inputType="text"
+        android:layout_height="wrap_content" android:singleLine="true"
+        android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
+        android:text="@string/editprofile_last"/>
+
+    <EditText android:id="@+id/editlastname" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" android:maxLines="1"
+        android:singleLine="true" android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content" android:inputType="text"
+        android:layout_height="wrap_content" android:singleLine="true"
+        android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
+        android:text="@string/editprofile_mail"/>
+
+    <EditText android:id="@+id/editemail" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" android:maxLines="1"
+        android:layout_gravity="center" android:singleLine="true" />
+
+    <Button android:id="@+id/saveprofile" style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="left" android:text="@string/editprofile_btn"
+        android:layout_marginTop="50dp" android:textStyle="bold"/>
+
+</LinearLayout>

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.parse.ParseObject;
 import com.parse.SignUpCallback;
 import com.parse.ParseUser;
 import com.parse.ParseException;
@@ -56,11 +58,13 @@ public class SignUpActivity extends Activity {
                     user.setEmail(email);
                     user.setUsername(username);
                     user.setPassword(password);
+                    user.put("FirstName", "");
+                    user.put("LastName", "");
                     user.signUpInBackground(new SignUpCallback() {
                         @Override
                         public void done(ParseException e) {
                             if(e == null) {
-                                Toast.makeText(getApplicationContext(), "Successfully signed in, please log in!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Successfully signed up, please log in!", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                 startActivity(intent);
                                 finish();

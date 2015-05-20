@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
         mUsernameSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = mUsernameView.getText().toString();
+                final String username = mUsernameView.getText().toString();
                 String password = mPasswordView.getText().toString();
 
                 ParseUser.logInInBackground(username, password, new LogInCallback() {

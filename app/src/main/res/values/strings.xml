@@ -29,11 +29,19 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="user_title">Administrator</string>
     <string name="edit_profile_btn">EDIT PROFILE</string>
+    <string name="logout_btn">LOG OUT</string>
     <string name="require_email">Email</string>
     <string name="require_username">Username</string>
     <string name="require_password">Password</string>
     <string name="require_confirmpassword">Confirm Password</string>
     <string name="require_sign_up">SIGN UP</string>
+
+    <string name="profile_header">Profile</string>
+    <string name="edit_profile_header">Edit Profile</string>
+    <string name="editprofile_first">First Name</string>
+    <string name="editprofile_last">Last Name</string>
+    <string name="editprofile_mail">Email address</string>
+    <string name="editprofile_btn">SAVE</string>
 
 
 </resources>
