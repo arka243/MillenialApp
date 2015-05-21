@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
@@ -47,10 +49,19 @@ public class DrawerActivity extends ActionBarActivity {
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
+    protected void onCreateDrawer(){
+                      // Finally we set the drawer toggle sync State
+    }
 
+    protected void onCreate(Bundle savedInstanceState, int resLayoutID) {
+        super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_drawer);
+        setContentView(resLayoutID);
+
+        /*Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.statusbarblue));*/
 
     /* Assinging the toolbar object ot the view
     and setting the the Action bar to our toolbar
@@ -132,7 +143,7 @@ public class DrawerActivity extends ActionBarActivity {
 
         }; // Drawer Toggle Object Made
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
-        mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
+        mDrawerToggle.syncState();
 
     }
 
