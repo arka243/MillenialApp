@@ -17,6 +17,7 @@ public class UserSettingActivity extends DrawerActivity {
         //super.onCreate(savedInstanceState);
         //addPreferencesFromResource(R.xml.user_settings);
         super.onCreate(savedInstanceState, R.layout.activity_drawer);
+
         FragmentManager mFragmentManager = getFragmentManager();
         FragmentTransaction mFragmentTransaction = mFragmentManager
                 .beginTransaction();

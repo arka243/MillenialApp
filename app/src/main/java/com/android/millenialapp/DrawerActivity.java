@@ -29,6 +29,7 @@ public class DrawerActivity extends ActionBarActivity {
     //First We Declare Titles And Icons For Our Navigation Drawer List View
     //This Icons And Titles Are holded in an Array as you can see
 
+    private static int fromPosition = 0;
     String TITLES[] = {"Assignments","Messages","Forum","Feed","Results","Rewards", "Settings"};
     int ICONS[] = {R.mipmap.ic_menu_assignments_24dp,R.mipmap.ic_menu_messages_24dp,R.mipmap.ic_menu_forum_24dp,R.mipmap.ic_menu_feed_24dp,R.mipmap.ic_menu_results_24dp,R.mipmap.ic_menu_rewards_24dp,R.mipmap.ic_menu_settings_24dp};
 
@@ -98,8 +99,12 @@ public class DrawerActivity extends ActionBarActivity {
                     Drawer.closeDrawers();
                     if(recyclerView.getChildPosition(child)==7)
                     {
+                        if (fromPosition == 7)
+                        {}
+                        else {
+                            fromPosition=7;
                         Intent i = new Intent(DrawerActivity.this, UserSettingActivity.class);
-                        startActivity(i);
+                        startActivity(i);}
                     }
                     Toast.makeText(DrawerActivity.this, "The Item Clicked is: " + recyclerView.getChildPosition(child), Toast.LENGTH_SHORT).show();
 
@@ -169,20 +174,23 @@ public class DrawerActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //@Override
+    /*//@Override
     public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
         Drawer.closeDrawers();
-        //Bundle args = new Bundle();
-       // args.putString("Menu", menu[position]);
         Intent i = new Intent(DrawerActivity.this, SignUpActivity.class);
         switch(position){
             case 7:
+                if (fromPosition == 7)
+                {System.out.println("7 hai");}
+                else {
+                    System.out.println("7 kar diya");
+                fromPosition = 7;
                 i = new Intent(DrawerActivity.this, UserSettingActivity.class);
+                }
                 break;
         }
-       // i.putExtra(args);
         startActivity(i);
-    }
+    }*/
 
 
 }

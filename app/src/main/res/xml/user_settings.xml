@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <PreferenceCategory
+        android:layout="@layout/activity_settings"
+            android:title="General"
+        android:id="@android:id/title">
+
+        <EditTextPreference
+            android:title="Profile Settings">
+        </EditTextPreference>
+        <EditTextPreference
+            android:title="Notification Settings">
+        </EditTextPreference>
+        <EditTextPreference
+            android:title="Change Password">
+        </EditTextPreference>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+
+        android:title="Legal &amp; Contact" >
+        <EditTextPreference
+            android:title="Feedback">
+        </EditTextPreference>
+        <EditTextPreference
+            android:title="Terms of Use">
+        </EditTextPreference>
+        <EditTextPreference
+            android:title="Privacy Policy">
+        </EditTextPreference>
+        <EditTextPreference
+            android:title="Version"
+            android:summary="1.0">
+        </EditTextPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
