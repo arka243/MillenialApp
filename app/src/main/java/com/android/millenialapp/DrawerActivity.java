@@ -50,10 +50,6 @@ public class DrawerActivity extends ActionBarActivity {
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
 
-    protected void onCreateDrawer(){
-                      // Finally we set the drawer toggle sync State
-    }
-
     protected void onCreate(Bundle savedInstanceState, int resLayoutID) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_drawer);

@@ -19,7 +19,7 @@ import com.parse.ParseUser;
 import java.util.HashMap;
 import java.util.List;
 
-public class ProfileActivity extends Activity {
+public class ProfileActivity extends DrawerActivity {
 
     private TextView fullName;
     private TextView userTitle;
@@ -29,8 +29,8 @@ public class ProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        super.onCreate(savedInstanceState, R.layout.activity_profile);
+        //setContentView(R.layout.activity_profile);
 
         //setting up the profile form
         fullName = (TextView) findViewById(R.id.fullname);
