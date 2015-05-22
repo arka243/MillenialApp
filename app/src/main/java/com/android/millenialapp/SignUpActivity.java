@@ -58,8 +58,6 @@ public class SignUpActivity extends Activity {
                     user.setEmail(email);
                     user.setUsername(username);
                     user.setPassword(password);
-                    user.put("FirstName", "");
-                    user.put("LastName", "");
                     user.signUpInBackground(new SignUpCallback() {
                         @Override
                         public void done(ParseException e) {
