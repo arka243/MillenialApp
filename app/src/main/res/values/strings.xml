@@ -1,6 +1,7 @@
 <?xml version = "1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MillenialApp</string>
+    <string name="privacypolicy">priti setting App</string>
     <string name="title_activity_drawer">DrawerActivity</string>
 
     <string name="title_section1">Assignments</string>
@@ -48,6 +49,8 @@
     <string name="editprofile_zip">Zip Code</string>
     <string name="editprofile_mobile">Mobile Number</string>
     <string name="editprofile_btn">SAVE</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_user_setting">UserSettingActivity</string>
     <string-array name="genderarray">
         <item>Female</item>
         <item>Male</item>

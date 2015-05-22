@@ -1,6 +1,7 @@
 package com.android.millenialapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,13 +9,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 public class DrawerActivity extends ActionBarActivity {
@@ -42,10 +49,19 @@ public class DrawerActivity extends ActionBarActivity {
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
+    protected void onCreateDrawer(){
+                      // Finally we set the drawer toggle sync State
+    }
 
+    protected void onCreate(Bundle savedInstanceState, int resLayoutID) {
+        super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_drawer);
+        setContentView(resLayoutID);
+
+        /*Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.statusbarblue));*/
 
     /* Assinging the toolbar object ot the view
     and setting the the Action bar to our toolbar
@@ -62,6 +78,43 @@ public class DrawerActivity extends ActionBarActivity {
         // and header view profile picture
 
         mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+
+        final GestureDetector mGestureDetector = new GestureDetector(DrawerActivity.this, new GestureDetector.SimpleOnGestureListener() {
+
+            @Override public boolean onSingleTapUp(MotionEvent e) {
+                return true;
+            }
+
+        });
+
+
+        mRecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+                View child = recyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
+
+
+                if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
+                    Drawer.closeDrawers();
+                    if(recyclerView.getChildPosition(child)==7)
+                    {
+                        Intent i = new Intent(DrawerActivity.this, UserSettingActivity.class);
+                        startActivity(i);
+                    }
+                    Toast.makeText(DrawerActivity.this, "The Item Clicked is: " + recyclerView.getChildPosition(child), Toast.LENGTH_SHORT).show();
+
+                    return true;
+
+                }
+
+                return false;
+            }
+
+            @Override
+            public void onTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+
+            }
+        });
 
         mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
 
@@ -90,7 +143,7 @@ public class DrawerActivity extends ActionBarActivity {
 
         }; // Drawer Toggle Object Made
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
-        mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
+        mDrawerToggle.syncState();
 
     }
 
@@ -115,4 +168,21 @@ public class DrawerActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //@Override
+    public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+        Drawer.closeDrawers();
+        //Bundle args = new Bundle();
+       // args.putString("Menu", menu[position]);
+        Intent i = new Intent(DrawerActivity.this, SignUpActivity.class);
+        switch(position){
+            case 7:
+                i = new Intent(DrawerActivity.this, UserSettingActivity.class);
+                break;
+        }
+       // i.putExtra(args);
+        startActivity(i);
+    }
+
+
 }
