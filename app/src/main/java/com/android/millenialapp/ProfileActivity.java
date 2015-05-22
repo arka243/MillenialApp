@@ -16,6 +16,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class ProfileActivity extends Activity {
@@ -24,6 +25,7 @@ public class ProfileActivity extends Activity {
     private TextView userTitle;
     private Button editProfile;
     private Button logOut;
+    static HashMap<String, String> userDetails = new HashMap<String, String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +57,19 @@ public class ProfileActivity extends Activity {
         });
 
         ParseUser current = ParseUser.getCurrentUser();
-        String firstname = current.get("FirstName").toString();
-        String lastname = current.get("LastName").toString();
-        if(firstname.equals("") && lastname.equals("")) {
-            fullName.setText("Anonymus User");
+        String user = current.getUsername().toString();
+
+        EditProfileActivity epa = new EditProfileActivity();
+        if(epa.userProfileDetails.containsKey(user)) {
+            String userinfo = epa.userProfileDetails.get(user);
+            String[] splitinfo = userinfo.split(" ");
+            userDetails.put(user, splitinfo[0] + " " + splitinfo[1]);
+        }
+        if(userDetails.containsKey(user)) {
+            fullName.setText(userDetails.get(user));
         }
         else {
-            fullName.setText(firstname + " " + lastname);
+            fullName.setText("Anonymous User");
         }
     }
 }
