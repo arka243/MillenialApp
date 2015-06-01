@@ -35,10 +35,10 @@ public class DrawerActivity extends ActionBarActivity {
 
     //Similarly we Create a String Resource for the name and email in the header view
     //And we also create a int resource for profile picture in the header view
-
-    String NAME = "Priti Changlani";
-    String EMAIL = "changlani.priti@ufl.edu";
-    int PROFILE = R.drawable.aka;
+//    String NAME, EMAIL;
+    String NAME = "Carolina Leigh";
+    String EMAIL = "Rewards: $10";
+    int PROFILE = R.drawable.yellow;
 
     private Toolbar toolbar;                              // Declaring the Toolbar Object
 
@@ -52,17 +52,8 @@ public class DrawerActivity extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState, int resLayoutID) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_drawer);
         setContentView(resLayoutID);
 
-        /*Window window = this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.statusbarblue));*/
-
-    /* Assinging the toolbar object ot the view
-    and setting the the Action bar to our toolbar
-     */
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
@@ -93,6 +84,69 @@ public class DrawerActivity extends ActionBarActivity {
 
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     Drawer.closeDrawers();
+                    if(recyclerView.getChildPosition(child)==0)
+                    {
+                        if (fromPosition == 0)
+                        {}
+                        else {
+                            fromPosition=0;
+                            Intent i = new Intent(DrawerActivity.this, ProfileActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==1)
+                    {
+                        if (fromPosition == 1)
+                        {}
+                        else {
+                            fromPosition=1;
+                            Intent i = new Intent(DrawerActivity.this, AssignmentsActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==2)
+                    {
+                        if (fromPosition == 2)
+                        {}
+                        else {
+                            fromPosition=2;
+                            Intent i = new Intent(DrawerActivity.this, MessagesActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==3)
+                    {
+                        if (fromPosition == 3)
+                        {}
+                        else {
+                            fromPosition=3;
+                            Intent i = new Intent(DrawerActivity.this, ForumActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==4)
+                    {
+                        if (fromPosition == 4)
+                        {}
+                        else {
+                            fromPosition=4;
+                            Intent i = new Intent(DrawerActivity.this, FeedsActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==5)
+                    {
+                        if (fromPosition == 5)
+                        {}
+                        else {
+                            fromPosition=5;
+                            Intent i = new Intent(DrawerActivity.this, ResultsActivity.class);
+                            startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==6)
+                    {
+                        if (fromPosition == 6)
+                        {}
+                        else {
+                            fromPosition=6;
+                            Intent i = new Intent(DrawerActivity.this, RewardsActivity.class);
+                            startActivity(i);}
+                    }
                     if(recyclerView.getChildPosition(child)==7)
                     {
                         if (fromPosition == 7)
@@ -102,7 +156,6 @@ public class DrawerActivity extends ActionBarActivity {
                         Intent i = new Intent(DrawerActivity.this, UserSettingActivity.class);
                         startActivity(i);}
                     }
-                    Toast.makeText(DrawerActivity.this, "The Item Clicked is: " + recyclerView.getChildPosition(child), Toast.LENGTH_SHORT).show();
 
                     return true;
 
@@ -169,24 +222,4 @@ public class DrawerActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    /*//@Override
-    public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
-        Drawer.closeDrawers();
-        Intent i = new Intent(DrawerActivity.this, SignUpActivity.class);
-        switch(position){
-            case 7:
-                if (fromPosition == 7)
-                {System.out.println("7 hai");}
-                else {
-                    System.out.println("7 kar diya");
-                fromPosition = 7;
-                i = new Intent(DrawerActivity.this, UserSettingActivity.class);
-                }
-                break;
-        }
-        startActivity(i);
-    }*/
-
-
 }

@@ -1,6 +1,15 @@
 <?xml version = "1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MillenialApp</string>
+    <string name="profile_name">Profile</string>
+    <string name="editprofile_name">Profile Info</string>
+    <string name="feeds_name">Feed</string>
+    <string name="assignment_name">Assignments</string>
+    <string name="message_name">Messages</string>
+    <string name="result_name">Results</string>
+    <string name="forum_name">Forum</string>
+    <string name="reward_name">Rewards</string>
+    <string name="reward_history_name">Reward History</string>
     <string name="privacypolicy">priti setting App</string>
     <string name="title_activity_drawer">DrawerActivity</string>
 
@@ -30,7 +39,6 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="user_title">Administrator</string>
     <string name="edit_profile_btn">EDIT PROFILE</string>
-    <string name="logout_btn">LOG OUT</string>
     <string name="require_email">Email</string>
     <string name="require_username">Username</string>
     <string name="require_password">Password</string>

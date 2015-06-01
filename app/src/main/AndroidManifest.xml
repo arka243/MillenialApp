@@ -7,29 +7,57 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".ParseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".SignUpActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
-            android:name=".SignUpActivity"
-            android:label="@string/app_name"
+            android:name=".AssignmentsActivity"
+            android:label="@string/assignment_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".MessagesActivity"
+            android:label="@string/message_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".ForumActivity"
+            android:label="@string/forum_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".FeedsActivity"
+            android:label="@string/feeds_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".ResultsActivity"
+            android:label="@string/result_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".RewardsActivity"
+            android:label="@string/reward_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".RewardsHistoryActivity"
+            android:label="@string/reward_history_name"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
@@ -38,11 +66,11 @@
         </activity>
         <activity
             android:name=".ProfileActivity"
-            android:label="@string/app_name" >
+            android:label="@string/profile_name" >
         </activity>
         <activity
             android:name=".EditProfileActivity"
-            android:label="@string/app_name" >
+            android:label="@string/editprofile_name" >
         </activity>
         <activity
             android:name=".UserSettingActivity"

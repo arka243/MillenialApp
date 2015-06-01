@@ -9,10 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import com.parse.ParseUser;
-
-import java.lang.reflect.Array;
 import java.util.HashMap;
 
 /**
@@ -31,6 +27,7 @@ public class EditProfileActivity extends Activity {
     private Spinner editDay;
     private Spinner editYear;
     public static HashMap<String,String> userProfileDetails = new HashMap<String, String>();
+    String currentuser = "carleigh";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +61,8 @@ public class EditProfileActivity extends Activity {
         yearadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         editYear.setAdapter(yearadapter);
 
-        ParseUser current = ParseUser.getCurrentUser();
-        if(userProfileDetails.containsKey(current.getUsername().toString())) {
-            String userinfo = userProfileDetails.get(current.getUsername().toString());
+        if(userProfileDetails.containsKey(currentuser)) {
+            String userinfo = userProfileDetails.get(currentuser);
             String[] userinfosplit = userinfo.split(" ");
             editFirstName.setText(userinfosplit[0]);
             editLastName.setText(userinfosplit[1]);
@@ -82,10 +78,6 @@ public class EditProfileActivity extends Activity {
             editYear.setSelection(pos3);
             int pos4 = adapter.getPosition(userinfosplit[6]);
             editGender.setSelection(pos4);
-        }
-        else {
-            String emailid = current.getEmail().toString();
-            editEmail.setText(emailid);
         }
 
         editSave.setOnClickListener(new View.OnClickListener() {
@@ -104,9 +96,8 @@ public class EditProfileActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "One or more fields are empty!", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    ParseUser currentuser = ParseUser.getCurrentUser();
                     String fullinfo = first + " " + last + " " + mail + " " + month + " " + day + " " + year + " " + gender + " " + zip + " " + mobile;
-                    userProfileDetails.put(currentuser.getUsername().toString(), fullinfo);
+                    userProfileDetails.put(currentuser, fullinfo);
                     Intent i = new Intent(EditProfileActivity.this, ProfileActivity.class);
                     startActivity(i);
                     finish();

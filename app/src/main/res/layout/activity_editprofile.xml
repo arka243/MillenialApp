@@ -1,125 +1,137 @@
 <?xml version = "1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" android:gravity="center_horizontal"
-    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" >
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:elevation="7dp" >
 
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
-        android:text="@string/editprofile_first"/>
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar" >
+        </include>-->
 
-    <EditText android:id="@+id/editfirstname" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text" android:maxLines="1"
-        android:singleLine="true" android:layout_gravity="left"/>
-
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:maxLines="1" android:layout_marginTop="10dp"
-        android:layout_gravity="left" android:text="@string/editprofile_last"/>
-
-    <EditText android:id="@+id/editlastname" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text" android:maxLines="1"
-        android:singleLine="true" android:layout_gravity="left"/>
-
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:maxLines="1" android:layout_marginTop="10dp"
-        android:layout_gravity="left" android:text="@string/editprofile_mail"/>
-
-    <EditText android:id="@+id/editemail" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" android:maxLines="1"
-        android:layout_gravity="left" android:singleLine="true" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content" android:layout_marginTop="10dp"
-        android:layout_height="wrap_content" android:layout_gravity="left">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center_horizontal"
+        android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
 
         <TextView
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
-            android:maxLines="1" android:id="@+id/monthtextview"
-            android:layout_alignParentLeft="true" android:text="@string/editprofile_month"/>
+            android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
+            android:text="@string/editprofile_first"/>
+
+        <EditText android:id="@+id/editfirstname" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" android:maxLines="1"
+            android:singleLine="true" android:layout_gravity="left"/>
 
         <TextView
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
-            android:maxLines="1" android:layout_marginLeft="45dp" android:id="@+id/daytextview"
-            android:layout_toRightOf="@+id/monthtextview" android:text="@string/editprofile_day"/>
+            android:maxLines="1" android:layout_marginTop="10dp"
+            android:layout_gravity="left" android:text="@string/editprofile_last"/>
+
+        <EditText android:id="@+id/editlastname" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" android:maxLines="1"
+            android:singleLine="true" android:layout_gravity="left"/>
 
         <TextView
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
-            android:maxLines="1" android:layout_marginLeft="43dp"
-            android:layout_toRightOf="@+id/daytextview" android:text="@string/editprofile_year"/>
+            android:maxLines="1" android:layout_marginTop="10dp"
+            android:layout_gravity="left" android:text="@string/editprofile_mail"/>
 
-    </RelativeLayout>
+        <EditText android:id="@+id/editemail" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" android:maxLines="1"
+            android:layout_gravity="left" android:singleLine="true" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content" android:layout_marginTop="5dp"
-        android:layout_height="wrap_content" android:layout_gravity="left">
+        <RelativeLayout
+            android:layout_width="wrap_content" android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" android:layout_gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content" android:inputType="text"
+                android:layout_height="wrap_content" android:singleLine="true"
+                android:maxLines="1" android:id="@+id/monthtextview"
+                android:layout_alignParentLeft="true" android:text="@string/editprofile_month"/>
+
+            <TextView
+                android:layout_width="wrap_content" android:inputType="text"
+                android:layout_height="wrap_content" android:singleLine="true"
+                android:maxLines="1" android:layout_marginLeft="45dp" android:id="@+id/daytextview"
+                android:layout_toRightOf="@+id/monthtextview" android:text="@string/editprofile_day"/>
+
+            <TextView
+                android:layout_width="wrap_content" android:inputType="text"
+                android:layout_height="wrap_content" android:singleLine="true"
+                android:maxLines="1" android:layout_marginLeft="43dp"
+                android:layout_toRightOf="@+id/daytextview" android:text="@string/editprofile_year"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content" android:layout_marginTop="5dp"
+            android:layout_height="wrap_content" android:layout_gravity="left">
+
+            <Spinner
+            android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content" android:id="@+id/monthspinner"/>
+
+            <Spinner
+                android:layout_width="wrap_content" android:layout_toRightOf="@+id/monthspinner"
+                android:layout_height="wrap_content" android:id="@+id/dayspinner"
+                android:layout_marginLeft="15dp" />
+
+            <Spinner
+                android:layout_width="wrap_content" android:layout_toRightOf="@+id/dayspinner"
+                android:layout_height="wrap_content" android:id="@+id/yearspinner"
+                android:layout_marginLeft="15dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content" android:inputType="text"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:maxLines="1" android:layout_marginTop="10dp"
+            android:layout_gravity="left" android:text="@string/editprofile_gender"/>
 
         <Spinner
-        android:layout_width="wrap_content" android:layout_alignParentLeft="true"
-        android:layout_height="wrap_content" android:id="@+id/monthspinner"/>
+            android:layout_width="wrap_content" android:layout_gravity="left"
+            android:layout_height="wrap_content" android:id="@+id/genderspinner"
+            android:layout_marginTop="5dp"/>
 
-        <Spinner
-            android:layout_width="wrap_content" android:layout_toRightOf="@+id/monthspinner"
-            android:layout_height="wrap_content" android:id="@+id/dayspinner"
-            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content" android:inputType="text"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:maxLines="1" android:layout_marginTop="10dp"
+            android:layout_gravity="left" android:text="@string/editprofile_zip"/>
 
-        <Spinner
-            android:layout_width="wrap_content" android:layout_toRightOf="@+id/dayspinner"
-            android:layout_height="wrap_content" android:id="@+id/yearspinner"
-            android:layout_marginLeft="15dp" />
+        <EditText android:id="@+id/editzip" android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" android:maxLines="1"
+            android:layout_gravity="left" android:singleLine="true" />
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content" android:inputType="text"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:maxLines="1" android:layout_marginTop="10dp"
+            android:layout_gravity="left" android:text="@string/editprofile_mobile"/>
 
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:maxLines="1" android:layout_marginTop="10dp"
-        android:layout_gravity="left" android:text="@string/editprofile_gender"/>
+        <EditText android:id="@+id/editmobile" android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" android:maxLines="1"
+            android:layout_gravity="left" android:singleLine="true" />
 
-    <Spinner
-        android:layout_width="wrap_content" android:layout_gravity="left"
-        android:layout_height="wrap_content" android:id="@+id/genderspinner"
-        android:layout_marginTop="5dp"/>
+        <Button android:id="@+id/saveprofile" style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="left" android:text="@string/editprofile_btn"
+            android:layout_marginTop="15dp" android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:maxLines="1" android:layout_marginTop="10dp"
-        android:layout_gravity="left" android:text="@string/editprofile_zip"/>
-
-    <EditText android:id="@+id/editzip" android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" android:maxLines="1"
-        android:layout_gravity="left" android:singleLine="true" />
-
-    <TextView
-        android:layout_width="wrap_content" android:inputType="text"
-        android:layout_height="wrap_content" android:singleLine="true"
-        android:maxLines="1" android:layout_marginTop="10dp"
-        android:layout_gravity="left" android:text="@string/editprofile_mobile"/>
-
-    <EditText android:id="@+id/editmobile" android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" android:maxLines="1"
-        android:layout_gravity="left" android:singleLine="true" />
-
-    <Button android:id="@+id/saveprofile" style="?android:textAppearanceSmall"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="left" android:text="@string/editprofile_btn"
-        android:layout_marginTop="15dp" android:textStyle="bold"/>
-
-</LinearLayout>
+    </LinearLayout>
+<!--</LinearLayout>-->

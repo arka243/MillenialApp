@@ -8,11 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.ParseObject;
-import com.parse.SignUpCallback;
-import com.parse.ParseUser;
-import com.parse.ParseException;
-
 public class SignUpActivity extends Activity {
 
     private EditText signupEmail;
@@ -54,24 +49,9 @@ public class SignUpActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "Password must be more than 6 characters", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    ParseUser user = new ParseUser();
-                    user.setEmail(email);
-                    user.setUsername(username);
-                    user.setPassword(password);
-                    user.signUpInBackground(new SignUpCallback() {
-                        @Override
-                        public void done(ParseException e) {
-                            if(e == null) {
-                                Toast.makeText(getApplicationContext(), "Successfully signed up, please log in!", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                                startActivity(intent);
-                                finish();
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(), "Sign Up Error", Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
+
+                    // THE REGISTRATION ACTIVITY
+
                 }
             }
         });
