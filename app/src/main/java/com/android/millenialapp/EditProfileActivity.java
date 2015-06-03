@@ -1,27 +1,38 @@
 package com.android.millenialapp;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+
 import java.util.HashMap;
 
 /**
  * Created by Arkaprava on 5/20/2015.
  */
-public class EditProfileActivity extends Activity {
+public class EditProfileActivity extends ActionBarActivity {
 
+    private Toolbar toolbar;
     private EditText editFirstName;
     private EditText editLastName;
     private EditText editEmail;
     private EditText editZip;
     private EditText editMobile;
-    private Button editSave;
+    private ImageButton editSave;
     private Spinner editGender;
     private Spinner editMonth;
     private Spinner editDay;
@@ -34,16 +45,20 @@ public class EditProfileActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
 
+        toolbar = (Toolbar) findViewById(R.id.done_tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         editFirstName = (EditText) findViewById(R.id.editfirstname);
         editLastName = (EditText) findViewById(R.id.editlastname);
         editEmail = (EditText) findViewById(R.id.editemail);
-        editSave = (Button) findViewById(R.id.saveprofile);
         editGender = (Spinner) findViewById(R.id.genderspinner);
         editMonth = (Spinner) findViewById(R.id.monthspinner);
         editDay = (Spinner) findViewById(R.id.dayspinner);
         editYear = (Spinner) findViewById(R.id.yearspinner);
         editZip = (EditText) findViewById(R.id.editzip);
         editMobile = (EditText) findViewById(R.id.editmobile);
+        editSave = (ImageButton) findViewById(R.id.doneButton);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genderarray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         editGender.setAdapter(adapter);
@@ -80,7 +95,7 @@ public class EditProfileActivity extends Activity {
             editGender.setSelection(pos4);
         }
 
-        editSave.setOnClickListener(new View.OnClickListener() {
+        editSave.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 String first = editFirstName.getText().toString();
@@ -106,5 +121,4 @@ public class EditProfileActivity extends Activity {
         });
 
     }
-
 }

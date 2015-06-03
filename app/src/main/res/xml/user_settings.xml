@@ -8,7 +8,7 @@
         android:id="@android:id/title">
 
         <EditTextPreference
-            android:title="Profile Settings">
+            android:title="Profile Info">
         </EditTextPreference>
         <EditTextPreference
             android:title="Notification Settings">

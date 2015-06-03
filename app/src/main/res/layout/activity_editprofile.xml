@@ -1,14 +1,13 @@
 <?xml version = "1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:elevation="7dp" >
+    android:orientation="vertical" >
 
-        <include
-            android:id="@+id/tool_bar"
-            layout="@layout/tool_bar" >
-        </include>-->
+    <include
+        android:id="@+id/done_tool_bar"
+        layout="@layout/done_actionbar">
+    </include>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -21,8 +20,9 @@
         <TextView
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
-            android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="20dp"
-            android:text="@string/editprofile_first"/>
+            android:layout_gravity="left" android:maxLines="1" android:layout_marginTop="5dp"
+            android:text="@string/editprofile_first" android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <EditText android:id="@+id/editfirstname" android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,9 @@
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
             android:maxLines="1" android:layout_marginTop="10dp"
-            android:layout_gravity="left" android:text="@string/editprofile_last"/>
+            android:layout_gravity="left" android:text="@string/editprofile_last"
+            android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <EditText android:id="@+id/editlastname" android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +46,9 @@
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
             android:maxLines="1" android:layout_marginTop="10dp"
-            android:layout_gravity="left" android:text="@string/editprofile_mail"/>
+            android:layout_gravity="left" android:text="@string/editprofile_mail"
+            android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <EditText android:id="@+id/editemail" android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,19 +63,25 @@
                 android:layout_width="wrap_content" android:inputType="text"
                 android:layout_height="wrap_content" android:singleLine="true"
                 android:maxLines="1" android:id="@+id/monthtextview"
-                android:layout_alignParentLeft="true" android:text="@string/editprofile_month"/>
+                android:layout_alignParentLeft="true" android:text="@string/editprofile_month"
+                android:textSize="6pt"
+                android:textColor="#c5c5c5"/>
 
             <TextView
                 android:layout_width="wrap_content" android:inputType="text"
                 android:layout_height="wrap_content" android:singleLine="true"
                 android:maxLines="1" android:layout_marginLeft="45dp" android:id="@+id/daytextview"
-                android:layout_toRightOf="@+id/monthtextview" android:text="@string/editprofile_day"/>
+                android:layout_toRightOf="@+id/monthtextview" android:text="@string/editprofile_day"
+                android:textSize="6pt"
+                android:textColor="#c5c5c5"/>
 
             <TextView
                 android:layout_width="wrap_content" android:inputType="text"
                 android:layout_height="wrap_content" android:singleLine="true"
                 android:maxLines="1" android:layout_marginLeft="43dp"
-                android:layout_toRightOf="@+id/daytextview" android:text="@string/editprofile_year"/>
+                android:layout_toRightOf="@+id/daytextview" android:text="@string/editprofile_year"
+                android:textSize="6pt"
+                android:textColor="#c5c5c5"/>
 
         </RelativeLayout>
 
@@ -99,7 +109,9 @@
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
             android:maxLines="1" android:layout_marginTop="10dp"
-            android:layout_gravity="left" android:text="@string/editprofile_gender"/>
+            android:layout_gravity="left" android:text="@string/editprofile_gender"
+            android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <Spinner
             android:layout_width="wrap_content" android:layout_gravity="left"
@@ -110,7 +122,9 @@
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
             android:maxLines="1" android:layout_marginTop="10dp"
-            android:layout_gravity="left" android:text="@string/editprofile_zip"/>
+            android:layout_gravity="left" android:text="@string/editprofile_zip"
+            android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <EditText android:id="@+id/editzip" android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -121,7 +135,9 @@
             android:layout_width="wrap_content" android:inputType="text"
             android:layout_height="wrap_content" android:singleLine="true"
             android:maxLines="1" android:layout_marginTop="10dp"
-            android:layout_gravity="left" android:text="@string/editprofile_mobile"/>
+            android:layout_gravity="left" android:text="@string/editprofile_mobile"
+            android:textSize="6pt"
+            android:textColor="#c5c5c5"/>
 
         <EditText android:id="@+id/editmobile" android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -134,4 +150,4 @@
             android:layout_marginTop="15dp" android:textStyle="bold"/>
 
     </LinearLayout>
-<!--</LinearLayout>-->
+</LinearLayout>

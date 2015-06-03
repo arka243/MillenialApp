@@ -36,8 +36,8 @@ public class LoginActivity extends Activity {
                 final String username = mUsernameView.getText().toString();
                 String password = mPasswordView.getText().toString();
 
-                //if(!username.equals("") && !password.equals("")) {
-                if(username.equals(user) && password.equals(pwd)) {
+                if(!username.equals("") && !password.equals("")) {
+                //if(username.equals(user) && password.equals(pwd)) {
                     Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                     startActivity(intent);
                     finish();
