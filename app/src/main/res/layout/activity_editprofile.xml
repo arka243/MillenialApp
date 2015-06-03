@@ -144,10 +144,5 @@
             android:inputType="textEmailAddress" android:maxLines="1"
             android:layout_gravity="left" android:singleLine="true" />
 
-        <Button android:id="@+id/saveprofile" style="?android:textAppearanceSmall"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_gravity="left" android:text="@string/editprofile_btn"
-            android:layout_marginTop="15dp" android:textStyle="bold"/>
-
     </LinearLayout>
 </LinearLayout>
