@@ -11,6 +11,7 @@ public class ProfileActivity extends DrawerActivity {
 
     private TextView fullName;
     private TextView userTitle;
+    private TextView badge;
     private Button editProfile;
 
     @Override
@@ -19,6 +20,7 @@ public class ProfileActivity extends DrawerActivity {
 
         fullName = (TextView) findViewById(R.id.fullname);
         userTitle = (TextView) findViewById(R.id.title);
+        badge = (TextView) findViewById(R.id.badge);
         editProfile = (Button) findViewById(R.id.editprofile);
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,5 +34,6 @@ public class ProfileActivity extends DrawerActivity {
         /* Hard coded profile */
         fullName.setText("Carolina Leigh");
         userTitle.setText("Tastemaker");
+        badge.setText("Badges");
     }
 }

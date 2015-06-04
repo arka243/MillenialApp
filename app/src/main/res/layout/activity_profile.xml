@@ -27,11 +27,11 @@
             android:paddingTop="@dimen/activity_vertical_margin" >
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:src="@drawable/yellow"
                 android:layout_gravity="left"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="0dp"
                 android:id="@+id/circleView"
                 />
@@ -49,6 +49,96 @@
              android:layout_gravity="left" android:text="@string/edit_profile_btn"
              android:background="#9c27b0" android:textColor="#ffffff"
              android:layout_marginTop="10dp" android:textStyle="bold"/>
+
+            <TextView android:id="@+id/badge" android:layout_width="match_parent"
+                android:layout_gravity="left" android:textColor="#9c27b0"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_gravity="left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView1"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_toRightOf="@+id/badgeView1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView2"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/badgeView2"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView3"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_gravity="left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView4"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/badgeView4"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView5"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grey"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/badgeView5"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:id="@+id/badgeView6"
+                    />
+
+            </RelativeLayout>
 
         </LinearLayout>
     </LinearLayout>

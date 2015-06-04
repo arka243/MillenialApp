@@ -30,15 +30,15 @@ public class DrawerActivity extends ActionBarActivity {
     //This Icons And Titles Are holded in an Array as you can see
 
     private static int fromPosition = 0;
-    String TITLES[] = {"Assignments","Messages","Forum","Feed","Results","Rewards", "Settings"};
-    int ICONS[] = {R.mipmap.ic_menu_assignments_24dp,R.mipmap.ic_menu_messages_24dp,R.mipmap.ic_menu_forum_24dp,R.mipmap.ic_menu_feed_24dp,R.mipmap.ic_menu_results_24dp,R.mipmap.ic_menu_rewards_24dp,R.mipmap.ic_menu_settings_24dp};
+    String TITLES[] = {"Assignments","Messages","Forum","Feed","Results","Rewards", "Settings", "Log Out"};
+    int ICONS[] = {R.mipmap.ic_menu_assignments_24dp,R.mipmap.ic_menu_messages_24dp,R.mipmap.ic_menu_forum_24dp,R.mipmap.ic_menu_feed_24dp,R.mipmap.ic_menu_results_24dp,R.mipmap.ic_menu_rewards_24dp,R.mipmap.ic_menu_settings_24dp,R.mipmap.ic_menu_logout_24dp};
 
     //Similarly we Create a String Resource for the name and email in the header view
     //And we also create a int resource for profile picture in the header view
 //    String NAME, EMAIL;
     String NAME = "Carolina Leigh";
     String EMAIL = "Rewards: $10";
-    int PROFILE = R.drawable.yellow;
+    int PROFILE = R.mipmap.ic_person_24dp;
 
     private Toolbar toolbar;                              // Declaring the Toolbar Object
 
@@ -155,6 +155,15 @@ public class DrawerActivity extends ActionBarActivity {
                             fromPosition=7;
                         Intent i = new Intent(DrawerActivity.this, UserSettingActivity.class);
                         startActivity(i);}
+                    }
+                    if(recyclerView.getChildPosition(child)==8)
+                    {
+                        if (fromPosition == 8)
+                        {}
+                        else {
+                            fromPosition=8;
+                            Intent i = new Intent(DrawerActivity.this, LoginActivity.class);
+                            startActivity(i);}
                     }
 
                     return true;
