@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:background="#ffffff"
+                    android:background="@android:color/transparent"
                     android:textColor="#9c27b0"/>
 
                 <TextView
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/action1"
                     android:layout_marginLeft="15dp"
-                    android:background="#ffffff"
+                    android:background="@android:color/transparent"
                     android:textColor="#9c27b0"/>
 
                 <ImageButton
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="150dp"
                     android:layout_gravity="right"
-                    android:background="#ffffff"
+                    android:background="@android:color/transparent"
                     android:layout_alignParentRight="true"
                     android:layout_toRightOf="@+id/action2"
                     android:src="@mipmap/ic_btn_share"/>

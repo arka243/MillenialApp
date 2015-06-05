@@ -28,7 +28,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:clickable="true">
 
                 <FrameLayout
@@ -75,7 +75,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true">
 
@@ -123,7 +123,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true">
 
@@ -162,7 +162,7 @@
                     android:id="@+id/secondLine3"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="25dp"
                     android:layout_alignParentRight="true"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/icon3"
@@ -171,7 +171,7 @@
                 <TextView
                     android:id="@+id/thirdLine3"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="44dp"
                     android:layout_alignParentRight="true"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/icon3"
@@ -181,7 +181,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true">
 
@@ -229,7 +229,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true">
 
@@ -268,7 +268,7 @@
                     android:id="@+id/secondLine5"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="25dp"
                     android:layout_alignParentRight="true"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/icon5"
@@ -277,7 +277,7 @@
                 <TextView
                     android:id="@+id/thirdLine5"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="44dp"
                     android:layout_alignParentRight="true"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/icon5"
@@ -287,7 +287,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:clickable="true">
 

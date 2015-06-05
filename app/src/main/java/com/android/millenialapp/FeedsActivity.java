@@ -50,12 +50,12 @@ public class FeedsActivity extends DrawerActivity {
         feedSecondLine2.setText("A new assignment is ready for you!");
         feedfirstLine3.setText("Brett Danika replied on");
         feedSecondLine3.setText("Eating Healthy");
-        feedThirdLine3.setText("Loren ipsum dolor sit amet, consectetur...");
+        feedThirdLine3.setText("Lorem ipsum dolor sit amet, consectetur...");
         feedfirstLine4.setText("Chatterbox");
         feedSecondLine4.setText("A new assignment is ready for you!");
         feedfirstLine5.setText("Carolina Leigh replied on");
         feedSecondLine5.setText("On the agenda");
-        feedThirdLine5.setText("Loren ipsum dolor sit amet, consectetur...");
+        feedThirdLine5.setText("Lorem ipsum dolor sit amet, consectetur...");
         feedfirstLine6.setText("Old Habits");
         feedSecondLine6.setText("The results you did");
     }

@@ -33,7 +33,7 @@ public class MessagesActivity extends DrawerActivity {
 
     String[] msgSender = {"Moderator", "Community Manager", "Moderator", "Caroline Leigh", "Moderator", "Truman Warrick"};
     String[] msgTitle = {"Question About", "Problem", "Quiz question #4 is", "We'd", "You have 2 hours", "Public questions"};
-    String msgBody = "Loren ipsum dolor sit amet, consectetur...";
+    String msgBody = "Lorem ipsum dolor sit amet, consectetur...";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
