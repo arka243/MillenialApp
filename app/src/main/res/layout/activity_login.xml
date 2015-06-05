@@ -69,10 +69,19 @@
         android:textStyle="bold"
         android:layout_gravity="center"/>
 
+    <ImageButton android:id="@+id/fblogin_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/fb_login"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"/>
+
     <TextView android:id="@+id/username_sign_up_button" style="?android:textAppearanceSmall"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="20dp"
         android:text="@string/action_sign_up"
         android:textSize="7.5pt"
         android:clickable="true"
