@@ -1,2 +1,2 @@
 # MillenialApp
-Priti is a rockstar!! :D :D
+Android Development as part of the Agency, UF.
