@@ -49,11 +49,6 @@ public class AssignmentsActivity extends DrawerActivity {
 
     }
 
-//    public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
-//        com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
-//        inflater.inflate(R.layout.menu, menu);
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -73,9 +68,4 @@ public class AssignmentsActivity extends DrawerActivity {
         return false;
     }
 
-//    public void gotoInfo(MenuItem item) {
-//        Intent intent = new Intent(AssignmentsActivity.this, InformationActivity.class);
-//        startActivity(intent);
-//        finish();
-//    }
 }
