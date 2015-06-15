@@ -1,7 +1,9 @@
 package com.android.millenialapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -47,10 +49,33 @@ public class AssignmentsActivity extends DrawerActivity {
 
     }
 
+//    public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+//        com.actionbarsherlock.view.MenuInflater inflater = getSupportMenuInflater();
+//        inflater.inflate(R.layout.menu, menu);
+//    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer, menu);
+        getMenuInflater().inflate(R.menu.info, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_info:
+                Intent i=new Intent(AssignmentsActivity.this, InformationActivity.class);
+                startActivity(i);
+                return true;
+        }
+        return false;
+    }
+
+//    public void gotoInfo(MenuItem item) {
+//        Intent intent = new Intent(AssignmentsActivity.this, InformationActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 }

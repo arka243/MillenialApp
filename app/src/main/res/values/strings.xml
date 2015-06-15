@@ -10,6 +10,7 @@
     <string name="forum_name">Forum</string>
     <string name="reward_name">Rewards</string>
     <string name="reward_history_name">Reward History</string>
+    <string name="information_name">Instructions</string>
     <string name="show_history">VIEW HISTORY</string>
     <string name="privacypolicy">priti setting App</string>
     <string name="title_activity_drawer">DrawerActivity</string>
